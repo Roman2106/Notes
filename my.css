@@ -1,0 +1,149 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.board {
+position: relative;
+	width: 100%;
+	height: 100%;
+	background:
+linear-gradient(
+	limegreen,
+	transparent
+),
+linear-gradient(
+	90deg,
+	skyblue,
+	transparent
+),
+linear-gradient(
+	-90deg,
+	coral,
+	transparent
+);
+	
+background-blend-mode: screen;
+	position: relative;
+}
+
+.newnote {
+	position: fixed;
+	right: 5px;
+	top: 5px;
+	outline: none;
+	font-weight: bold;
+	z-index: 10;
+	box-shadow:inset 0px 1px 0px 0px #efdcfb;
+	background:linear-gradient(to bottom, #dfbdfa 5%, #bc80ea 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfbdfa', endColorstr='#bc80ea',GradientType=0);
+	background-color:#dfbdfa;
+	border-radius:6px;
+	border:1px solid #c584f3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:22px;
+	padding:7px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #9752cc;
+}
+.newnote:hover {
+	background:linear-gradient(to bottom, #bc80ea 5%, #dfbdfa 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc80ea', endColorstr='#dfbdfa',GradientType=0);
+	background-color:#bc80ea;
+}
+.newnote:active {
+	top:7px;
+}
+
+
+#note {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	font: 16px Arial;
+	background: linear-gradient(rgb(216, 215, 85), rgb(250, 248, 45));
+	box-shadow: 5px 0 10px rgb(203, 160, 41);
+	border-radius: 5px;
+	float: left;
+}
+
+#note:hover {
+	cursor: pointer;
+}
+
+#note div#nextText {
+	position: absolute;
+	width: 200px;
+	height: 80%;
+	top:20%;
+	left:0;
+	padding: 5px;
+	box-sizing: border-box;
+	display: none;
+	font-family: 'Bad Script', cursive;
+	font-size: 20px;
+	color: black;
+}
+
+#note textarea {
+	position: absolute;
+	width: 100%;
+	height: 80%;
+	top:20%;
+	left: 0;
+	resize: none;
+	box-sizing: border-box;
+	background: transparent;
+	border: none;
+	float: left;
+	font-family: 'Bad Script', cursive;
+	font-size: 16px;
+	color: black;
+	outline: none;
+}
+
+.toup {
+	z-index: 100;
+}
+
+#spanClose{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background: red;
+	background-image: url(images/close.svg);
+	border-radius: 8px;
+	background-position: center center;
+	background-origin: 50% 50%;
+	background-repeat: no-repeat;
+	margin: 5px 5px 5px 5px;
+	transition: all .4s;
+	float: left;
+}
+
+#spanClose:hover{
+	cursor: pointer;
+	opacity: .6;
+}
+
+#spanSave{
+	display: inline-block;
+	background-image: url(images/save.svg);
+	width: 26px;
+	height: 26px;
+	background-origin: 50% 50%;
+	background-repeat: no-repeat;
+	background-position: cover;
+	background-size: 100%;
+	margin: 5px 5px 5px 5px;
+	transition: all .4s;
+}
+
+#spanSave:hover{
+	cursor: pointer;
+	opacity: .7;
+}
